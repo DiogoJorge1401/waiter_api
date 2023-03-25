@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server",
         "build": "sh etc/build.sh",
-        "prod": "sh etc/prod.sh",
-        "build:prod": "yarn build && yarn prod"
+        "start": "sh etc/prod.sh",
+        "build:prod": "yarn build && yarn start"
     },
     "devDependencies": {
         "@types/express": "^4.17.17",
