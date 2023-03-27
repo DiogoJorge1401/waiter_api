@@ -1,4 +1,4 @@
-import { Document, Types } from 'mongoose';
+import { Document, Model, Types } from 'mongoose';
 
 export interface OrderProduct {
     product: Types.ObjectId;
@@ -10,3 +10,5 @@ export interface OrderDocument extends Document {
     status: 'WAITING' | 'IN_PRODUCTION' | 'DONE';
     products: OrderProduct[];
 }
+
+export type OrderModel = Model<OrderDocument>;
