@@ -1,4 +1,4 @@
-import { Category } from '@models/Category';
+import { Category } from '@models/category';
 import { GetAllCategoriesService } from './service';
 import { GetAllCategoriesController } from './controller';
 

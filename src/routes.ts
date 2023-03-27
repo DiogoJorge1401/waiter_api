@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { categoryRouter } from './useCases/Category/routes';
-import { orderRouter } from './useCases/Order/routes';
-import { productRouter } from './useCases/Product/routes';
+import { categoryRouter } from './useCases/category/routes';
+import { orderRouter } from './useCases/order/routes';
+import { productRouter } from './useCases/product/routes';
 
 const routes = Router();
 
-routes.use('/product', productRouter);
-routes.use('/order', orderRouter);
-routes.use('/category', categoryRouter);
+routes.use('/products', productRouter);
+routes.use('/orders', orderRouter);
+routes.use('/categories', categoryRouter);
 
 export { routes };

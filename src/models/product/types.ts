@@ -1,7 +1,7 @@
 import { Document, Model } from 'mongoose';
-import { CategoryDocument } from '../Category/types';
+import { CategoryDocument } from '../category/types';
 
-interface Ingredient {
+export interface Ingredient {
     icon: string;
     name: string;
 }

@@ -1,4 +1,4 @@
-import { CategoryModel } from '@models/Category/types';
+import { CategoryModel } from '@models/category/types';
 
 export class GetAllCategoriesService {
     constructor(private categoryModel: CategoryModel) {}
