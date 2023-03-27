@@ -5,7 +5,7 @@
         "moduleResolution": "node",
         "lib": [],
         "checkJs": true,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false,
         "skipLibCheck": false,
         "strict": true,
         "allowJs": true,
