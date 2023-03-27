@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { categoryRouter } from './category';
-import { orderRouter } from './order';
-import { productRouter } from './product';
+import { categoryRouter } from './useCases/Category/routes';
+import { orderRouter } from './useCases/Order/routes';
+import { productRouter } from './useCases/Product/routes';
 
 const routes = Router();
 
