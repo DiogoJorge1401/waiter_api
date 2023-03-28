@@ -1,6 +1,6 @@
 import { app } from './app';
-import { PORT, URL } from './config';
-import { connect } from './database/mongo_connect';
+import { PORT, URL } from './configs/vars';
+import { connect } from './connections/mongo_connect';
 
 const main = async () => {
     try {
