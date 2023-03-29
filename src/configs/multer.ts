@@ -1,4 +1,5 @@
 import multer from 'multer';
+import { randomUUID } from 'node:crypto';
 import path from 'node:path';
 
 export const upload = multer({
@@ -7,7 +8,7 @@ export const upload = multer({
             cb(null, path.resolve(__dirname, '..', '..', 'uploads'));
         },
         filename(req, file, cb) {
-            cb(null, file.originalname);
+            cb(null, `${randomUUID()}-${file.originalname}`);
         },
     }),
 });
