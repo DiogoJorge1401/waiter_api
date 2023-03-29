@@ -7,7 +7,7 @@ export class CreateProductController {
     handle = async (req: Request, res: Response) => {
         try {
             const { body, file } = req;
-            const { price, ingredients } = body;
+            const { price, ingredients = '[]' } = body;
             const product = await this.createProductService.execute({
                 ...body,
                 imagePath: file?.filename,
