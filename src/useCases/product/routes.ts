@@ -1,6 +1,7 @@
+import { upload } from '@configs/multer';
 import { Router } from 'express';
-import { getAllProductsController } from './getAllProducts';
 import { createProductController } from './createProduct';
+import { getAllProductsController } from './getAllProducts';
 
 const productRouter = Router();
 
@@ -8,6 +9,6 @@ const productRouter = Router();
 productRouter.get('/', getAllProductsController.handle);
 
 // create product
-productRouter.post('/', createProductController.handle);
+productRouter.post('/', upload.single('image'), createProductController.handle);
 
 export { productRouter };

@@ -6,8 +6,14 @@ export class CreateProductController {
 
     handle = async (req: Request, res: Response) => {
         try {
-            const data = req.body;
-            const product = await this.createProductService.execute(data);
+            const { body, file } = req;
+            const { price, ingredients } = body;
+            const product = await this.createProductService.execute({
+                ...body,
+                imagePath: file?.filename,
+                price: +price,
+                ingredients: JSON.parse(ingredients),
+            });
             res.status(201).json(product);
         } catch (err) {
             if (err instanceof Error)
