@@ -1,15 +1,17 @@
 import e from 'express';
-import 'express-async-support';
+import 'express-async-errors';
 import path from 'node:path';
-import { exception } from './middlewares/exception';
+import { connect } from './connections/mongo_connect';
 import { routes } from './routes';
+
+connect();
 
 const app = e();
 
 app.use(e.json());
+
 app.use('/uploads', e.static(path.resolve(__dirname, '..', 'uploads')));
 
 app.use(routes);
-app.use(exception);
 
 export { app };
