@@ -9,6 +9,6 @@ export class ChangeOrderStatusService {
         if (!allowed_status.includes(status))
             throw new Error(`status should be ${allowed_status.join(', ')}`);
 
-        return this.orderModel.updateOne({ id: orderId }, { $set: { status } });
+        return this.orderModel.findByIdAndUpdate(orderId, { $set: { status } });
     }
 }
