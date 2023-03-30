@@ -4,8 +4,6 @@ export class DeleteOrderService {
     constructor(private orderModel: OrderModel) {}
 
     async execute(orderId: string) {
-        await this.orderModel.deleteOne({
-            id: orderId,
-        });
+        await this.orderModel.findByIdAndDelete(orderId);
     }
 }
