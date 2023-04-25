@@ -9,10 +9,10 @@ export class GetProductByCategoryController {
     handle = async (req: Request, res: Response) => {
         const { categoryId } = req.params;
 
-        const product = await this.getProductByCategoryService.execute(
+        const products = await this.getProductByCategoryService.execute(
             categoryId
         );
 
-        res.json({ product });
+        res.json({ products });
     };
 }
