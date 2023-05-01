@@ -2,6 +2,7 @@ import e from 'express';
 import path from 'node:path';
 import { connect } from './connections/mongo_connect';
 import { routes } from './routes';
+import { exception } from './middlewares/exception';
 
 connect();
 
@@ -12,5 +13,7 @@ app.use(e.json());
 app.use('/uploads', e.static(path.resolve(__dirname, '..', 'uploads')));
 
 app.use(routes);
+
+app.use(exception);
 
 export { app };
