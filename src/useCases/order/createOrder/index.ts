@@ -4,5 +4,5 @@ import { CreateOrderController } from './controller';
 
 const createOrderService = new CreateOrderService(Order);
 export const createOrderController = new CreateOrderController(
-    createOrderService
+  createOrderService
 );

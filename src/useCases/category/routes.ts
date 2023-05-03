@@ -14,8 +14,8 @@ categoryRouter.post('/', endpoint(createCategoryController.handle));
 
 // get product by category
 categoryRouter.get(
-    '/:categoryId/products',
-    endpoint(getProductByCategoryController.handle)
+  '/:categoryId/products',
+  endpoint(getProductByCategoryController.handle)
 );
 
 export { categoryRouter };

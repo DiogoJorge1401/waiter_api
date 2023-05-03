@@ -4,5 +4,5 @@ import { DeleteOrderController } from './controller';
 
 const deleteOrderService = new DeleteOrderService(Order);
 export const deleteOrderController = new DeleteOrderController(
-    deleteOrderService
+  deleteOrderService
 );

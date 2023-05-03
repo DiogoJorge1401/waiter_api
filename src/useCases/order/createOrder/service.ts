@@ -7,9 +7,9 @@ export type CreateOrderData = {
 };
 
 export class CreateOrderService {
-    constructor(private orderModel: OrderModel) {}
+  constructor(private orderModel: OrderModel) {}
 
-    async execute(data: CreateOrderData) {
-        return this.orderModel.create(data);
-    }
+  async execute(data: CreateOrderData) {
+    return this.orderModel.create(data);
+  }
 }

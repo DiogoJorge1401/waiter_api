@@ -10,9 +10,9 @@ interface CreateProductData {
 }
 
 export class CreateProductService {
-    constructor(private productModel: ProductModel) {}
+  constructor(private productModel: ProductModel) {}
 
-    async execute(data: CreateProductData) {
-        return this.productModel.create(data);
-    }
+  async execute(data: CreateProductData) {
+    return this.productModel.create(data);
+  }
 }

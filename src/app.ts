@@ -3,6 +3,7 @@ import path from 'node:path';
 import { connect } from './connections/mongo_connect';
 import { routes } from './routes';
 import { exception } from './middlewares/exception';
+import { swaggerDocs } from './configs/swagger';
 
 connect();
 
@@ -15,5 +16,7 @@ app.use('/uploads', e.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 app.use(exception);
+
+swaggerDocs(app);
 
 export { app };

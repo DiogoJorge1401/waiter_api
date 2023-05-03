@@ -1,12 +1,12 @@
 import { OrderDocument, OrderModel } from '@models/order/types';
 
 export class GetAllOrdersService {
-    constructor(private orderModel: OrderModel) {}
+  constructor(private orderModel: OrderModel) {}
 
-    async execute() {
-        return this.orderModel
-            .find()
-            .sort({ createdAt: 'asc' })
-            .populate('products.product');
-    }
+  async execute() {
+    return this.orderModel
+      .find()
+      .sort({ createdAt: 'asc' })
+      .populate('products.product');
+  }
 }

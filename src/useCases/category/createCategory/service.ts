@@ -6,9 +6,9 @@ type CreateCategoryData = {
 };
 
 export class CreateCategoryService {
-    constructor(private categoryModel: CategoryModel) {}
+  constructor(private categoryModel: CategoryModel) {}
 
-    async execute(data: CreateCategoryData) {
-        return this.categoryModel.create(data);
-    }
+  async execute(data: CreateCategoryData) {
+    return this.categoryModel.create(data);
+  }
 }

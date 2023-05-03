@@ -4,5 +4,5 @@ import { ChangeOrderStatusController } from './controller';
 
 const changeOrderStatusService = new ChangeOrderStatusService(Order);
 export const changeOrderStatusController = new ChangeOrderStatusController(
-    changeOrderStatusService
+  changeOrderStatusService
 );

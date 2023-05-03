@@ -4,5 +4,5 @@ import { GetAllOrdersController } from './controller';
 
 const getAllOrdersService = new GetAllOrdersService(Order);
 export const getAllOrdersController = new GetAllOrdersController(
-    getAllOrdersService
+  getAllOrdersService
 );
