@@ -1,4 +1,4 @@
-import { OrderDocument, OrderModel } from '@models/order/types';
+import { OrderModel } from '@models/order/types';
 
 export class GetAllOrdersService {
   constructor(private orderModel: OrderModel) {}
