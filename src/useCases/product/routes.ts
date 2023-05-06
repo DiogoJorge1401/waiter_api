@@ -6,28 +6,27 @@ import { endpoint } from '@middlewares/enpoint';
 
 const productRouter = Router();
 
-
 /**
-    * @openapi
-    * /products:
-    *   get:
-    *     tags:
-    *       - Products
-    *     description: Get all products
-    *     responses:
-    *       200:
-    *         description: Success
-    *         content:
-    *           application/json:
-    *             schema:
-    *               type: object
-    *               properties:
-    *                 products:
-    *                   type: array
-    *                   items:
-    *                     type: object
-    *
-    */
+ * @openapi
+ * /products:
+ *   get:
+ *     tags:
+ *       - Products
+ *     description: Get all products
+ *     responses:
+ *       200:
+ *         description: Success
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 products:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *
+ */
 productRouter.get('/', endpoint(getAllProductsController.handle));
 
 // create product

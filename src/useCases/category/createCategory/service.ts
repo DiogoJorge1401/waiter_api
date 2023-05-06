@@ -1,8 +1,8 @@
 import { CategoryModel } from '@models/category/types';
 
 type CreateCategoryData = {
-    icon: string;
-    name: string;
+  icon: string;
+  name: string;
 };
 
 export class CreateCategoryService {

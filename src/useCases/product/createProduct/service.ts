@@ -1,12 +1,12 @@
 import { Ingredient, ProductModel } from '@models/product/types';
 
 interface CreateProductData {
-    name: string;
-    description: string;
-    imagePath: string;
-    price: number;
-    ingredients: Ingredient[];
-    category: string;
+  name: string;
+  description: string;
+  imagePath: string;
+  price: number;
+  ingredients: Ingredient[];
+  category: string;
 }
 
 export class CreateProductService {

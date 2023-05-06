@@ -8,32 +8,29 @@ const swaggerOptions: swaggerJsDoc.Options = {
     openapi: '3.0.0',
     info: {
       title: 'RAPIDSERVE API Docs',
-      version
+      version,
     },
     components: {
       securitySchemes: {
         bearerAuth: {
           type: 'http',
           scheme: 'bearer',
-          bearerFormat: 'JWT'
-        }
-      }
+          bearerFormat: 'JWT',
+        },
+      },
     },
     security: [
       {
-        bearerAuth: []
-      }
-    ]
+        bearerAuth: [],
+      },
+    ],
   },
   apis: ['./src/**/routes.ts'],
 };
 
-
 const swaggerSpec = swaggerJsDoc(swaggerOptions);
 
-
 export const swaggerDocs = (app: Express) => {
-
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   app.get('docs.json', (req, res) => {
