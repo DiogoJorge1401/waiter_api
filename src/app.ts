@@ -11,12 +11,6 @@ const app = e();
 
 app.use(e.json());
 
-app.use('/uploads', e.static(path.resolve(__dirname, '..', 'uploads')));
-
-app.use(routes);
-
-app.use(exception);
-
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', '*');
@@ -24,6 +18,12 @@ app.use((req, res, next) => {
 
   next();
 });
+
+app.use('/uploads', e.static(path.resolve(__dirname, '..', 'uploads')));
+
+app.use(routes);
+
+app.use(exception);
 
 swaggerDocs(app);
 
