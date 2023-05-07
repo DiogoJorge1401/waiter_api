@@ -18,9 +18,9 @@ app.use(routes);
 app.use(exception);
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', '*');
-  res.header('Access-Controll-Allow-Methods', '*');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Access-Controll-Allow-Methods', '*');
 
   next();
 });
