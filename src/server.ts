@@ -5,12 +5,7 @@ import { PORT, URL } from './configs/vars';
 
 const server = http.createServer(app);
 
-export const io = new Server(server, {
-  cors: {
-    origin: '*',
-    methods: '*',
-  },
-});
+export const io = new Server(server);
 
 server.listen(PORT, () => {
   console.log(`Server is running on ${URL}`);
