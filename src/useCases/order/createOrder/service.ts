@@ -1,4 +1,5 @@
 import { OrderModel, OrderProduct } from '@models/order/types';
+import { io } from '../../../server';
 
 export type CreateOrderData = {
   table: string;
@@ -10,6 +11,10 @@ export class CreateOrderService {
   constructor(private orderModel: OrderModel) {}
 
   async execute(data: CreateOrderData) {
-    return this.orderModel.create(data);
+    const order = await this.orderModel.create(data);
+
+    io.emit('newOrder', order);
+
+    return order;
   }
 }

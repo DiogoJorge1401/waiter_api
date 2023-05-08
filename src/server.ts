@@ -1,10 +1,11 @@
-import { app } from './app';
-import { PORT, URL } from './configs/vars';
 import http from 'node:http';
 import { Server } from 'socket.io';
+import { app } from './app';
+import { PORT, URL } from './configs/vars';
 
 const server = http.createServer(app);
-const io = new Server(server, {
+
+export const io = new Server(server, {
   cors: {
     origin: '*',
     methods: '*',
